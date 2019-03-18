@@ -18,6 +18,7 @@ def createGraphs(primes):
 	PyBoolNet.InteractionGraphs.add_style_constants(igraph)
 	PyBoolNet.InteractionGraphs.igraph2image(igraph, "interGraph.pdf")
 
+	state = PyBoolNet.StateTransitionGraphs.random_state(primes)
 	local_igraph = PyBoolNet.InteractionGraphs.local_igraph_of_state(primes, state)
 	PyBoolNet.InteractionGraphs.add_style_interactionsigns(local_igraph)
 	PyBoolNet.InteractionGraphs.igraph2image(local_igraph, "localInterGraph.pdf")
